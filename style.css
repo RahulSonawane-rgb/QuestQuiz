@@ -15,18 +15,22 @@
     box-sizing: border-box;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: url('./Source/Background.jpg') center center/cover no-repeat;
+    filter: blur(18px) brightness(0.7);
+    opacity: 0.90;
+    pointer-events: none;
+}
+
 body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
     background-size: 200% 200%;
-    animation: gradientShift 10s ease infinite;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 body.dark {
