@@ -202,7 +202,7 @@ function selectOption(option, button) {
 
 // Show final score
 function showResult() {
-    console.log(`Quiz done, score: ${score}/${shuffledQuestions.length}`);
+    console.log(`Quiz done, score: ${score}/${currentQuestion + 1}`);
     quizContainer.querySelector('#question-container').classList.add('hidden');
     quizContainer.querySelector('#feedback').classList.add('hidden');
     quizContainer.querySelector('#quiz-next-btn').classList.add('hidden');
