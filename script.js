@@ -208,7 +208,7 @@ function showResult() {
     quizContainer.querySelector('#quiz-next-btn').classList.add('hidden');
     resultContainer.classList.remove('hidden');
     startBookBtn.classList.remove('hidden');
-    resultText.textContent = `You got ${score} out of ${shuffledQuestions.length}!`;
+    resultText.textContent = `You got ${score} out of ${currentQuestion}!`;
     isQuizActive = false;
     startQuizBtn.textContent = 'Start Quiz';
     startQuizBtn.style.pointerEvents = 'auto';
