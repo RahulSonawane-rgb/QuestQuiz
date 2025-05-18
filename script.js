@@ -202,7 +202,7 @@ function selectOption(option, button) {
 
 // Show final score
 function showResult() {
-    console.log(`Quiz done, score: ${score}/${currentQuestion + 1}`);
+    console.log(`Quiz done, score: ${score}/${shuffledQuestions.length}`);
     quizContainer.querySelector('#question-container').classList.add('hidden');
     quizContainer.querySelector('#feedback').classList.add('hidden');
     quizContainer.querySelector('#quiz-next-btn').classList.add('hidden');
@@ -249,9 +249,14 @@ retryBtn.addEventListener('click', () => {
     quizContainer.querySelector('#question-container').classList.remove('hidden');
     resultContainer.classList.add('hidden');
     startBookBtn.classList.add('hidden');
+    isQuizActive = true;
+    startQuizBtn.textContent = 'Quit Quiz'; //Changes
     loadQuestion();
 });
 
+if(isQuizActive) {
+    startQuizBtn.textContent = 'Quit Quiz';
+}
 // Start or quit quiz
 startQuizBtn.addEventListener('click', (e) => {
     console.log(`Quiz button clicked, isQuizActive: ${isQuizActive}`);
