@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivaji Maharaj: The Warrior King</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- Welcome Section -->
+    <div class="first-page hidden">
+        <div id="quiz-container">
+            <h1 id="quiz-title">Shivaji Maharaj Quiz</h1>
+            <div id="progress"></div>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options"></div>
+            </div>
+            <div id="feedback" class="hidden"></div>
+            <button id="quiz-next-btn" class="hidden">Next</button>
+            <button id="start-book-btn" class="hidden">Start Reading</button>
+            <div id="result-container" class="hidden">
+                <h2 id="result-text"></h2>
+                <button id="retry-btn">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Section -->
+    <div class="Book-Section active">
+        <button id="theme-toggle">Dark Theme</button>
+        <button id="auto-btn">Auto-Flip</button>
+        <button class="nav-btn" id="prev-btn" aria-label="Previous page">
+            <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+        </button>
+        <div id="book" class="book">
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <h1 class="book-title">Chhatrapati Shivaji Maharaj: The Warrior King</h1>
+                        <img src="./Source/Front-Cover.jpg" class="cover-img" alt="Book Cover">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h2>Table of Contents</h2>
+                        <ul>
+                            <li>Chapter 1: Early Life and Inspiration....Page 2</li>
+                            <li>Chapter 2: Rise to Power.................Page 4</li>
+                            <li>Chapter 3: Defeating Afzal Khan..........Page 6</li>
+                            <li>Chapter 4: Daring Escapes and Raids......Page 8</li>
+                            <li>Chapter 5: Clashes with the Mughals......Page 10</li>
+                            <li>Chapter 6: Coronation and Governance.....Page 12</li>
+                            <li>Chapter 7: Enduring Legacy...............Page 14</li>
+                            <li>Epilogue................................Page 15</li>
+                        </ul>
+                        <p class="page-number">Page 1</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h2>Chapter 1: Early Life and Inspiration</h2>
+                        <p>Shivaji Maharaj was born on February 19, 1630, at Shivneri Fort near Junnar. His father, Shahaji Bhosale, was a Maratha general, and his mother, Jijabai, was a deeply religious woman who shaped his values. Named after goddess Shivai, Shivaji grew up in a time when the Adilshahi and Mughal empires ruled the land. Jijabai filled his mind with stories of heroes like Arjuna and Rana Pratap, igniting his love for justice and his homeland. In Pune, he roamed the Sahyadri hills, gaining strength and learning the terrain that would later aid his battles.</p>
+                        <p class="page-number">Page 2</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h2>Chapter 1 (Cont.)</h2>
+                        <p>By his teens, Shivaji was leading the Mavalas, tough warriors from the hills. He trained in sword fighting, horse riding, and guerrilla tactics, perfect for the Deccan’s rugged lands. Seeing his father serve Bijapur, he witnessed their harsh rule, which drove him to dream of Swaraj—self-rule for his people. With Jijabai’s wisdom and guidance from mentors like Dadaji Kondadev, Shivaji built a vision of a free Maratha nation, grounded in fairness and pride.</p>
+                        <p class="page-number">Page 3</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h2>Chapter 2: Rise to Power</h2>
+                        <p>At 16, Shivaji took Torna Fort in 1646, sneaking past Bijapur’s guards with a small, sharp team. This bold strike stunned the Deccan, marking him as a rising force. He used the fort’s riches to grow his power, showing he was as smart as he was brave. Soon, he captured forts like Raigad, his future capital, and Kondana, picking spots that gave him control over key areas.</p>
+                        <p class="page-number">Page 4</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h2>Chapter 2 (Cont.)</h2>
+                        <p>Shivaji’s raids threw Bijapur off balance, hitting their supplies and keeping them guessing. He built a spy network and won over local chiefs, making his attacks swift and surprising. His dream of Swaraj inspired the people, who saw him as their defender. By strengthening his forts and training his men in guerrilla fighting, Shivaji laid the roots for a Maratha comeback, earning respect and fear alike.</p>
+                        <p class="page-number">Page 5</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <h2>Chapter 3: Defeating Afzal Khan</h2>
+                        <p>In 1659, Bijapur sent Afzal Khan, a fierce general, with a huge army to stop Shivaji. Khan tried to trick him into a deadly meeting at Pratapgad Fort. Shivaji, sensing the trap, came prepared with a hidden tiger claw and armor. He strengthened the fort and hid his men in the nearby jungles, ready for a fight that would test his wits and nerve.</p>
+                        <p class="page-number">Page 6</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <h2>Chapter 3 (Cont.)</h2>
+                        <p>When Khan tried to stab him during their meeting, Shivaji struck back with the tiger claw, killing him. His forces then ambushed Khan’s army, using the hills to win a huge victory at Pratapgad. This win weakened Bijapur and made Shivaji a hero, drawing more to his cause. The battle proved he could outsmart stronger foes, boosting his fame as a champion of Swaraj.</p>
+                        <p class="page-number">Page 7</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <h2>Chapter 4: Daring Escapes and Raids</h2>
+                        <p>In 1660, Bijapur trapped Shivaji at Panhala Fort. With supplies running low, he planned a bold escape on a stormy night, using a decoy to fool the enemy. He headed for Vishalgad, while his loyal commander, Baji Prabhu Deshpande, held a narrow pass called Ghod Khind, fighting to his death to save Shivaji. This stand, called the Battle of Pavan Khind, became a tale of Maratha courage.</p>
+                        <p class="page-number">Page 8</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <h2>Chapter 4 (Cont.)</h2>
+                        <p>In 1664, Shivaji raided Surat, a rich Mughal port, taking gold and jewels to fund his fight. This daring strike shamed the Mughals and showed he could hit far-off targets. His escapes and raids kept his enemies rattled while growing his wealth and his people’s spirit. He also built a navy, securing the coast and trade routes, showing his plans went beyond the hills.</p>
+                        <p class="page-number">Page 9</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <h2>Chapter 5: Clashes with the Mughals</h2>
+                        <p>Shivaji’s rise alarmed Mughal emperor Aurangzeb, who sent general Shaista Khan to crush him. In 1663, Shivaji led a night raid on Khan’s camp in Pune, sneaking in with a small team to wound Khan and drive him out. This bold move shocked the Mughals and lifted Maratha spirits, showing Shivaji could challenge the empire’s might.</p>
+                        <p class="page-number">Page 10</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <h2>Chapter 5 (Cont.)</h2>
+                        <p>In 1666, Aurangzeb called Shivaji to Agra but locked him up. Shivaji escaped by hiding in a basket of sweets, slipping back to the Deccan. These clashes showed his smarts and grit, taking on a massive empire again and again. His defiance set the stage for a long Maratha fight against the Mughals, inspiring his people to keep going.</p>
+                        <p class="page-number">Page 11</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p7" class="paper">
+                <div class="front">
+                    <div id="f7" class="front-content">
+                        <h2>Chapter 6: Coronation and Governance</h2>
+                        <p>On June 6, 1674, Shivaji was crowned Chhatrapati at Raigad Fort in a grand ceremony, declaring himself king. Called “Haindava Dharmoddharak” (defender of Hindu faith), he stood for pride and Swaraj. The coronation challenged Mughal and Adilshahi rule, with his court shining as a symbol of Maratha strength.</p>
+                        <p class="page-number">Page 12</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b7" class="back-content">
+                        <h2>Chapter 6 (Cont.)</h2>
+                        <p>Shivaji set up a smart government with eight ministers handling taxes, justice, and defense. He ensured fairness, letting Hindus, Muslims, and others live together. His tax reforms helped farmers, and he grew his navy and forts. Shivaji’s rule mixed strength with care, making him a model for Indian leaders who valued justice and power.</p>
+                        <p class="page-number">Page 13</p>
+                    </div>
+                </div>
+            </div>
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div id="f8" class="front-content">
+                        <h2>Chapter 7: Enduring Legacy</h2>
+                        <p>Shivaji died on April 3, 1680, at Raigad, but his legacy endured. With over 300 forts, a strong army, and a navy, he built a lasting Maratha Empire. His guerrilla tactics, called “Ganimi Kava,” inspired leaders like Bajirao and Tarabai to grow Maratha power. His vision of Swaraj and pride made him a timeless hero of resistance.</p>
+                        <p class="page-number">Page 14</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b8" class="back-content">
+                        <div style="text-align:center; margin: 24px 0;">
+                            <img src="./Source/Last-Cover.jpg" alt="The End" id="LastCover-img"/>
+                            <div style="font-size:1.5em; margin-top:12px; font-weight:bold; color:#555;">The End</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="nav-btn" id="next-btn" aria-label="Next page">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </button>
+    </div>
+    <button id="start-quiz-btn">Start Quiz</button>
+</body>
+</html>
