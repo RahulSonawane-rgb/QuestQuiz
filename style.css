@@ -2,7 +2,7 @@
     --primary-color: #e0407a;
     --secondary-color: #f9d923;
     --text-color: #2d1b3b;
-    --background-color: #fff6fa;
+    --background-color: #9e9157;
     --dark-background-color: #1a0b2e;
     --dark-text-color: #e0d4f0;
     --gradient-start: #ffb6d5;
@@ -201,7 +201,6 @@ body.dark {
     color: var(--text-color);
 }
 
-/* Book Styling */
 .book {
     width: 350px;
     height: 500px;
@@ -209,12 +208,9 @@ body.dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 1500px;
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.book:hover {
-    filter: drop-shadow(0 0 15px var(--primary-color));
+    perspective: 2500px; /* Deep 3D effect */
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .paper {
@@ -223,8 +219,19 @@ body.dark {
     height: 100%;
     top: 0;
     left: 0;
-    perspective: 1500px;
+    perspective: 2500px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+#p1 { transform: skewX(3deg) translateZ(2px); } /* Outermost, most skew */
+#p2 { transform: skewX(2.8deg) translateZ(2px); }
+#p3 { transform: skewX(2.6deg) translateZ(2px); }
+#p4 { transform: skewX(2.4deg) translateZ(2px); }
+#p5 { transform: skewX(2.2deg) translateZ(2px); }
+#p6 { transform: skewX(2deg) translateZ(2px); }
+#p7 { transform: skewX(1.8deg) translateZ(2px); }
+#p8 { transform: skewX(1.6deg) translateZ(2px); } /* Innermost, least skew */
 
 .front, .back {
     background: var(--background-color);
@@ -289,6 +296,10 @@ body.dark {
     background: linear-gradient(120deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--gradient-end) 100%);
     opacity: 0.18;
     pointer-events: none;
+}
+
+.front, body.dark .back {
+    background: var(--background-color);
 }
 
 body.dark .front, body.dark .back {
@@ -379,7 +390,6 @@ body.dark .page-number {
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     border: none;
-    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #theme-toggle:hover, #auto-btn:hover, #start-quiz-btn:hover {
@@ -547,5 +557,4 @@ body.dark .back-content p, body.dark .front-content p {
         font-size: 1.1em;
         margin-bottom: 10px;
     }
-
 }
