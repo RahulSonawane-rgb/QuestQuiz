@@ -21,7 +21,7 @@ body::before {
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
     background: url('./Source/Background.jpg') center center/cover no-repeat;
-    filter: blur(18px) brightness(0.7);
+    filter: blur(8px) brightness(0.7);
     opacity: 0.90;
     pointer-events: none;
 }
@@ -76,7 +76,7 @@ body.dark {
 
 /* Quiz Styling */
 #quiz-container {
-    background: white;
+    background: var(--background-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
