@@ -482,7 +482,26 @@ body.dark .back-content p, body.dark .front-content p {
     .book {
         width: 200px;
         height: 330px;
+        transform: rotateX(-25deg);
+        perspective: 2000px;
     }
+
+    .book:hover {
+        transform: rotateX(-20deg);
+    }
+
+    .book:has(.paper.flipped) {
+        transform: rotateX(0deg);
+    }
+
+    #p1 { transform: skewX(3deg) translateZ(2px); } /* Outermost, most skew */
+    #p2 { transform: skewX(2.8deg) translateZ(2px); }
+    #p3 { transform: skewX(2.6deg) translateZ(2px); }
+    #p4 { transform: skewX(2.4deg) translateZ(2px); }
+    #p5 { transform: skewX(2.2deg) translateZ(2px); }
+    #p6 { transform: skewX(2deg) translateZ(2px); }
+    #p7 { transform: skewX(1.8deg) translateZ(2px); }
+    #p8 { transform: skewX(1.6deg) translateZ(2px); } /* Innermost, least skew */
 
     .cover-img {
         width: 100px;
